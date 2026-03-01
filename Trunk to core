@@ -1,0 +1,23 @@
+enable
+configure terminal
+
+hostname ACCESS-SW
+no ip domain-lookup
+
+! VLANs must exist on access switch too
+vlan 10
+vlan 20
+vlan 30
+vlan 40
+vlan 50
+
+
+
+! ------------------------
+! TRUNK TO CORE
+! ------------------------
+
+interface gigabitEthernet 0/1
+switchport mode trunk
+no shutdown
+exit
