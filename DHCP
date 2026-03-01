@@ -1,0 +1,49 @@
+
+! ------------------
+! DHCP
+! ------------------
+
+
+
+
+configure terminal
+
+ip dhcp excluded-address 192.168.0.1 192.168.0.20
+ip dhcp excluded-address 192.168.1.1 192.168.1.20
+ip dhcp excluded-address 192.168.2.1 192.168.2.20
+ip dhcp excluded-address 192.168.4.1 192.168.4.20
+ip dhcp excluded-address 192.168.5.1 192.168.5.20
+
+ip dhcp pool OFFICE
+network 192.168.0.0 255.255.255.0
+default-router 192.168.0.1
+dns-server 8.8.8.8
+exit
+
+ip dhcp pool POS
+network 192.168.1.0 255.255.255.0
+default-router 192.168.1.1
+dns-server 8.8.8.8
+exit
+
+ip dhcp pool IOT
+network 192.168.2.0 255.255.255.0
+default-router 192.168.2.1
+dns-server 8.8.8.8
+exit
+
+ip dhcp pool CCTV
+network 192.168.4.0 255.255.255.0
+default-router 192.168.4.1
+dns-server 8.8.8.8
+exit
+
+ip dhcp pool GUEST
+network 192.168.5.0 255.255.255.0
+default-router 192.168.5.1
+dns-server 8.8.8.8
+exit
+
+end
+write memory
+
