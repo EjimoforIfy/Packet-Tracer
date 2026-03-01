@@ -1,0 +1,19 @@
+
+! ------------------
+! BLOCK POS → IOT
+! ------------------
+
+
+configure terminal
+
+ip access-list extended BLOCK_POS_TO_IOT
+deny ip 192.168.1.0 0.0.0.255 192.168.2.0 0.0.0.255
+permit ip any any
+exit
+
+interface vlan 20
+ip access-group BLOCK_POS_TO_IOT in
+exit
+
+end
+write memory
