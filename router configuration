@@ -1,0 +1,27 @@
+
+! -----------------------
+! ROUTER CONFIGURATION 
+! -----------------------
+
+
+enable
+configure terminal
+
+hostname FARM-ROUTER
+no ip domain-lookup
+
+interface gigabitEthernet 0/0
+ip address 192.168.100.1 255.255.255.0
+no shutdown
+exit
+
+interface gigabitEthernet 0/1
+ip address dhcp
+no shutdown
+exit
+
+ip route 192.168.0.0 255.255.252.0 192.168.100.2
+
+end
+write memory
+
