@@ -1,0 +1,30 @@
+enable
+configure terminal
+
+hostname CORE-SW
+no ip domain-lookup
+ip routing
+
+! ------------------------
+! VLAN CREATION
+! ------------------------
+
+vlan 10
+name OFFICE
+exit
+
+vlan 20
+name POS
+exit
+
+vlan 30
+name IOT
+exit
+
+vlan 40
+name CCTV
+exit
+
+vlan 50
+name GUEST
+exit
