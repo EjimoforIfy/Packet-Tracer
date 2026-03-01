@@ -1,0 +1,30 @@
+! ------------------------
+! SVI CONFIGURATION
+! ------------------------
+
+interface vlan 10
+ip address 192.168.0.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 20
+ip address 192.168.1.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 30
+ip address 192.168.2.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 40
+ip address 192.168.4.1 255.255.255.0
+no shutdown
+exit
+
+interface vlan 50
+ip address 192.168.5.1 255.255.255.0
+no shutdown
+exit
+
+
